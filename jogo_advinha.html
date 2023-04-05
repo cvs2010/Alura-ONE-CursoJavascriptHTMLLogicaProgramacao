@@ -2,6 +2,24 @@
 <html><head><style>body {background-color: rgba(0, 0, 0, 0.866);color: rgb(171, 171, 158);}</style></head></html>
 
 <h1>Jogo de Advinhação</h1><br>
+
 <script>
+    
+    function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+
+}
+    var numeroExato = (Math.random() *100).toFixed(0)
+
+    var seuChute = parseInt(prompt("Escreva um número de 1 a 99"));
+    mostra("Você escolheu o número: " + seuChute +", mas o número exato é: " + numeroExato);
 
 </script>
