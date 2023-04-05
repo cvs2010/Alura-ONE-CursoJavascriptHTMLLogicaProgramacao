@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<html><head><style>body {background-color: rgba(0, 0, 0, 0.866);color: rgb(171, 171, 158);}</style></head></html>
+
+<h1>O prompt sempre retorna o que foi inserido como texto, então você deve converter para número (parseInt)</h1><br>
+<script>
+
+function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+}
+
+var time = prompt("Qual seu time?");
+var vitorias = parseInt(prompt("Entre com o número de vitórias:"));
+var empates = parseInt(prompt("Entre com o número de empates:"));
+
+var pontos = ( vitorias  * 3 )+ empates;
+
+mostra("O " + time + " tem " + pontos + " pontos");
+
+</script>
