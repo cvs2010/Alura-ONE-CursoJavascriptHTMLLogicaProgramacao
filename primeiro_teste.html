@@ -2,7 +2,7 @@
 
 <h1>Meu primeiro teste!</h1>
 <br>
-Seria isso um programa? Descubra visitando a Alura <a href="http://www.alura.com.br">aqui</a>!
+Seria isso um programa? Descubra visitando meu perfil do LinkedIn <a href="https://www.linkedin.com/in/cvs1987">aqui</a>!
 
 <br>
 <br>
@@ -190,7 +190,7 @@ document.write("O Gasto com etanol será: " + (etanol * (distanciaKm/gastoMedioE
 <br>
 <br>
 
-<h1>Calculando o IMC</h1><br>
+<h1>Função com 2 parâmetros: Calculando o IMC</h1><br>
 <script>
 
 function pulaLinha() {
@@ -220,7 +220,7 @@ calculaImc(1.72, 68);
 <br>
 <br>
 
-<h1>Função com 2 parâmetros</h1><br>
+<h1>Outro exemplo de Função com 2 parâmetros</h1><br>
 
 <script>
 
@@ -240,3 +240,25 @@ calculaImc(1.72, 68);
 
     somaDoisNumeros(10, 40);
 </script>
+
+<br>
+<br>
+<br>
+
+<h1>Cláusula RETURN, quando preciso utilizar o return ?</h1><br>
+
+<script>
+function calculaImc(altura, peso) {
+
+var imc = peso / (altura * altura);
+return imc;
+
+}
+
+var imcMeu = calculaImc(1.71, 73);
+var imcAmigo = calculaImc(1.72, 68);
+
+mostra("Esse é meu IMC: " + imcMeu.toFixed(2));
+mostra("Esse é o IMC do meu amigo: " + imcAmigo.toFixed(2));
+</script>
+
