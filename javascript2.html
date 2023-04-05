@@ -1,16 +1,26 @@
 <meta charset="UTF-8">
 <html><head><style>body {background-color: rgba(0, 0, 0, 0.866);color: rgb(171, 171, 158);}</style></head></html>
 
-<h1>Criando um script no qual o usuário irá inserir seu Peso e Altura<br>
-Para calcular o IMC</h1><br>
+<h1>Criando um script no qual o usuário irá inserir seu Peso e Altura Para calcular o IMC</h1><br>
 <script>
+    
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
 
     function calculaImc(altura, peso) {
 
         return peso / (altura * altura);
     }
-
-    mostra(nome + ", o seu IMC é " + imc);
 
     var nome = prompt("Informe o seu nome");
     var alturaInformada = prompt(nome + ", informe sua altura");
@@ -18,8 +28,8 @@ Para calcular o IMC</h1><br>
 
     var imc = calculaImc(alturaInformada, pesoInformado);
 
-    document.write(nome + ", o seu IMC é " + imc);
-    
+    mostra(nome + ", o seu IMC é " + imc);
+
     if(imc < 18.5) {
 
     mostra("Você está abaixo do recomendado");
@@ -29,6 +39,7 @@ Para calcular o IMC</h1><br>
     if(imc > 35) {
 
     mostra("Você está acima do recomendado");
+
     }
 
     if(imc >= 18.5 && imc <= 35) {
