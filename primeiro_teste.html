@@ -1,3 +1,242 @@
+<meta charset="UTF-8">
+
 <h1>Meu primeiro teste!</h1>
 <br>
-Seria isso um programa? Descubra visitando a Alura aqui!
+Seria isso um programa? Descubra visitando a Alura <a href="http://www.alura.com.br">aqui</a>!
+
+<br>
+<br>
+<br>
+
+<h1>Título do Exercício</h1><br>
+<script>
+
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Meu primeiro script em JavaScript</h1><br>
+
+<script>
+
+    alert("Isso sim é um programa");
+
+</script>
+
+<script>
+
+    document.write("A idade do Flávio é ");
+    document.write(18 + 20);
+
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Brincando com números dentro do JavaScript</h1><br>
+<script>
+
+document.write("Flávio nasceu em " + (2016 - 39) + "<br>");
+document.write("Joaquim nasceu em " + (2016 - 20) + "<br>");
+document.write("Barney nasceu em " + (2016 - 40) + "<br>");
+
+</script>
+
+<br>
+<br>
+
+<h1>Concatenando.... Se liga nessa diferença</h1><br>
+<script>
+    document.write("Qual o resultado da seguinte concatenação A + B + 20 + 10 + C + (5 + 10) + D : " + "A" + "B" + 20 + 10 + "C" + (5 + 10) + "D");
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Criando minhas primeiras variáveis</h1><br>
+<script>
+
+    var ano = 2023;
+
+    document.write("Estamos no ano de " + ano );
+    document.write("<br>");
+    document.write("Flávio tem " + (ano - 1977) + " anos");
+    document.write("<br>");
+    document.write("Joaquim tem " + (ano - 1996) + " anos");
+    document.write("<br>");
+    document.write("Barney tem " + (ano - 1976) + " anos");
+    document.write("<br>");
+
+</script>
+
+<br>
+<br>
+
+<h1>Usando a Média com variáveis</h1><br>
+<script>
+    var idadeFlavio = 39;
+    var idadeJoaquim = 20;
+    var idadeBarney = 41;
+    
+    var media = (idadeFlavio + idadeJoaquim + idadeBarney)/3;
+
+    document.write("A média das idades de Flávio, Joaquim e Barney é: " + media.toFixed(2));
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Criando funções. Exemplo: pulos de linha</h1><br>
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+
+}
+
+var ano = 2016;
+
+document.write("Flávio tem " + (ano - 1977) + " anos");
+pulaLinha();
+
+document.write("Joaquim tem " + (ano - 1996) + " anos");
+
+pulaLinha();
+
+ano = 2017;
+document.write("Barney tem " + (ano - 1976) + " anos");
+
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Parâmetros das Funções (SE LIGA)</h1><br>
+<script>
+
+function mostrartexto(frase) {
+
+    document.write(frase);
+
+}
+
+mostrartexto("Oi!" + "<br>");
+mostrartexto("Como vai?!" + "<br>");
+mostrartexto("Tudo bem?!" + "<br>");
+
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Olha esse exemplo: Criando títulos e paragrafação com funções e parâmetros no Javascript</h1><br>
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function exibeTitulo(titulo) {
+        document.write("<big>" + "<strong>" + titulo + "</strong>" +"</big>");
+        pulaLinha();
+    }
+
+    function exibeParagrafo(paragrafo) {
+        document.write("<p>" + paragrafo + "</p>");
+        pulaLinha();
+    }
+
+    // pede para alguém ler daqui em diante e veja se ele entende o que esta sendo feito
+    exibeTitulo("Bem-vindos");
+    exibeParagrafo("Este é um simples programa");
+</script>
+
+<br>
+
+<h1>Calculando preço de uma vigame Etanol x Gasolina</h1><br>
+Em uma viagem de 2000 km o preço do Etanol é R$3.68, a Gasolina é 5.15.<br>
+O gasto médio é 12km/litro na Gasolina, o do Etanol é 70% da Gasolina.<br>
+Qual o gasto da viagem com Etanol e Gasolina?<br><br>
+<script>
+
+let etanol = 3.68;
+let gasolina = 5.15;
+let gastoMedioG = 12;
+let gastoMedioE = gastoMedioG * 0.7;
+let distanciaKm = 2000;
+let tipo = 'g';
+
+if (tipo === 'g'){
+    let valorTotal = gasolina * (distanciaKm/gastoMedioG);
+    document.write("O Gasto com gasolina será: " + valorTotal.toFixed(2) + "<br>")
+} else {
+    let valorTotal = etanol * (distanciaKm/gastoMedioE);
+    document.write("O Gasto com etanol será: " + valorTotal.toFixed(2) + "<br>")
+}
+
+document.write("O Gasto com etanol será: " + (etanol * (distanciaKm/gastoMedioE)).toFixed(2))
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Calculando o IMC</h1><br>
+<script>
+
+function pulaLinha() {
+        document.write("<br>");
+    }
+
+function mostrartexto(frase) {
+
+document.write(frase);
+
+}
+
+function calculaImc(altura, peso) {
+
+    var imc = peso / (altura * altura);
+    mostrartexto("O imc calculado para altura: " + "<strong>" + altura + "</strong>" + " e peso: " + "<strong>" + peso + "</strong>" + " é " + "<strong>" + imc.toFixed(2) + "</strong>" );
+    pulaLinha()
+}
+
+
+calculaImc(1.71, 73);
+calculaImc(1.72, 68);
+
+</script>
+
+<br>
+<br>
+<br>
+
+<h1>Função com 2 parâmetros</h1><br>
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function somaDoisNumeros(numero1, numero2) {
+        mostra("Os 2 números são: " + numero1 + " e " + numero2 );
+        mostra("A soma dos dois números é : " + (numero1 + numero2) );
+    }
+
+    somaDoisNumeros(10, 40);
+</script>
