@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+<html><head><style>body {background-color: rgba(0, 0, 0, 0.866);color: rgb(171, 171, 158);}</style></head></html>
+
+<h1>Tela de Login</h1><br>
+
+<script>
+
+
+    var loginCadastrado = "abcde@gmail.com";
+    var senhaCadastrada = "abcde12345";
+    var limiteTentativas = 3;
+    var contadorTentativas = 1;
+
+    while (contadorTentativas <= limiteTentativas) {
+        var loginInformado = prompt("Informe seu LOGIN");
+        var senhaInformada = prompt("Informe sua SENHA");
+
+        if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) {
+
+            document.write("Bem-vindo ao sistema, " + loginInformado);
+
+            contadorTentativas = limiteTentativas; // acertou, então faço o gasto de todas as tentativas para sair do loop. Lá embaixo vai incrementar + 1! 
+
+        } else {
+
+            if (contadorTentativas == 3) {
+                document.write("Número permitido de tentativas ultrapassado! Recarregue a página para tentar novamente.");
+            } else {
+                alert("Login inválido. Tente novamente");
+            }
+        }
+
+       // vai para a próxima tentativa
+        contadorTentativas = contadorTentativas +1  
+    }
+
+</script>
