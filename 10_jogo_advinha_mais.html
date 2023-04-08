@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<html><head><style>body {background-color: rgba(0, 0, 0, 0.866);color: rgb(171, 171, 158);}</style></head></html>
+
+<h1>Associando scripts a Campos e formulários - Jogo de Advinhação Melhorado</h1><br>
+
+<a1><script>maxTentativas = 2; document.write(`Tente advinhar um número de 1 a 99, em ${maxTentativas} tentativas`);</script></a1><br>
+<input/><button>Compare com o meu segredo</button>
+
+<script>
+    var segredo = (Math.random() *100).toFixed(0);
+    document.write(segredo);
+    tentativas = 1;
+    var button = document.querySelector("button");
+    var input = document.querySelector("input");
+    input = parseInt(input.value);
+    button.onclick = verifica;
+
+    function verifica() {
+        if (tentativas <= maxTentativas) {
+
+        var input = document.querySelector("input");
+        input = parseInt(input.value);
+
+            if (input == segredo) {
+            alert("Parabéns! Você acertou! Recarregue a página se desejar jogar novamente!");
+            
+            } if(tentativas <= (maxTentativas - 1)) {
+                if(input > segredo){
+                alert(`Tente de novo, o número que você escolheu é maior que o número que eu Escolhi!`);
+                }
+                if(input < segredo){
+                alert(`Tente de novo, o número que você escolheu é menor que o número que eu Escolhi!`);
+                }
+            } else {
+                document.body.style.background = "#AA0000";
+                document.body.style.color = "#AA0001";
+                document.write(`Você stingiu o número máximo de tentativas, o número exato é: ${segredo}! Recarregue a página se desejar jogar novamente!`);
+            }   
+        tentativas++;
+        }   
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+
+</script>
