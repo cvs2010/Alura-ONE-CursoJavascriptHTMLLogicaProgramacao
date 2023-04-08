@@ -4,7 +4,6 @@
 <h1>Jogo de Advinhação</h1><br>
 
 <script>
-    
     function pulaLinha() {
 
     document.write("<br>");
@@ -16,10 +15,29 @@
     document.write(frase);
     pulaLinha();
 
-}
-    var numeroExato = (Math.random() *100).toFixed(0)
+    }
 
-    var seuChute = parseInt(prompt("Escreva um número de 1 a 99"));
-    mostra("Você escolheu o número: " + seuChute +", mas o número exato é: " + numeroExato);
+    var numeroExato = (Math.random() *100).toFixed(0);
 
+    var tentativas = 1;
+
+    while (tentativas <= 6) {
+
+        var seuChute = parseInt(prompt("Escolha um número de 1 a 99, tente acertar em 5 tentativas!"));
+
+        if (seuChute == numeroExato) {
+            mostra("Parabéns! Você acertou!");
+        } if(tentativas <= 5) {
+            if(seuChute > numeroExato){
+            alert(`Tente de novo, o número que você escolheu é maior que o número que eu Escolhi!`);
+            }
+            if(seuChute < numeroExato){
+            alert(`Tente de novo, o número que você escolheu é menor que o número que eu Escolhi!`);
+            }
+        } else {
+            mostra(`Você escolheu o número: ${seuChute}, mas o número exato é: ${numeroExato}`);
+        }
+
+    tentativas++;
+    }
 </script>
