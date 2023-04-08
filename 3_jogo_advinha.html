@@ -26,7 +26,8 @@
         var seuChute = parseInt(prompt("Escolha um número de 1 a 99, tente acertar em 5 tentativas!"));
 
         if (seuChute == numeroExato) {
-            mostra("Parabéns! Você acertou!");
+            mostra("Parabéns! Você acertou! Que tal jogar de novo? Recarregue a página!");
+            break;
         } if(tentativas <= 5) {
             if(seuChute > numeroExato){
             alert(`Tente de novo, o número que você escolheu é maior que o número que eu Escolhi!`);
@@ -35,7 +36,7 @@
             alert(`Tente de novo, o número que você escolheu é menor que o número que eu Escolhi!`);
             }
         } else {
-            mostra(`Você escolheu o número: ${seuChute}, mas o número exato é: ${numeroExato}`);
+            mostra(`Você escolheu o número: ${seuChute}, mas o número exato é: ${numeroExato}, recarregue a página para tentar de novo!`);
         }
 
     tentativas++;
