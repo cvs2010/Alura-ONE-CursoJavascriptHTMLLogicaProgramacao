@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Jogo de Advinhação Melhorado</title>
+	<style>
+		body {
+			background-color: rgba(0, 0, 0, 0.866);
+			color: rgb(171, 171, 158);
+		}
+	</style>
+</head>
+<body>
+	<h1>Acerte um dos números do array</h1>
+	<br>
+
+
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+    function sorteia() {
+
+       return Math.round(Math.random() * 100);
+
+    }
+
+    function sorteiaNumeros(quantidade) {
+
+        var segredos = [];
+
+        var numero = 1;
+
+        while(numero <= quantidade) {
+
+                var numeroAleatorio = sorteia();
+                var achou = false;
+
+                if (numeroAleatorio !== 0) {
+                    for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+                        if(segredos[posicao] == numeroAleatorio){
+                                achou = true;
+                                break;
+                        }
+
+                    }
+
+                    if (achou == false) {
+                        segredos.push(numeroAleatorio);
+                        numero++;
+                    }
+                }
+
+        }
+
+        return segredos;
+
+    }
+
+    function pulalinha(){
+        document.write("<br>");
+    }
+
+    pulalinha();
+
+    var segredos = sorteiaNumeros(25);
+		for (var i=0; i<segredos.length; i++) {
+		document.write("<br>" + "Elemento " +i+ " do array é: " +segredos[i]);
+		}
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function verifica() {
+
+        var achou = false;
+
+        for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+                if(input.value == segredos[posicao]) {
+
+                    alert("Você ACERTOU!");
+                    achou = true;
+                    break;
+                } 
+        }
+
+        if(achou == false) {
+
+                alert("Você ERROU!");
+        }
+
+        input.value = "";
+        input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>
+
+
+</body>
+</html>
